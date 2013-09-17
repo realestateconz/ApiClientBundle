@@ -1,0 +1,28 @@
+{
+    "name": "realestateconz/api-client-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony integration for the Realestate.co.nz Api Client",
+    "keywords": ["realestate.co.nz", "property", "listings", "api", "client"],
+    "homepage": "https://github.com/pasinter/ApiClientBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Realestate.co.nz",
+            "homepage": "http://www.realestate.co.nz"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/realestateconz/ApiClientBundle/contributors"
+        }
+    ],
+    "require": {
+        "symfony/symfony": ">=2.3.0",
+        "realestateconz/api-client": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "psr-0": { "RealestateCoNz\\ApiClientBundle": "" }
+        }
+    },
+    "target-dir": "RealestateCoNz/ApiClientBundle"
+}
