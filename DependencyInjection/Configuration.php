@@ -22,6 +22,7 @@ class Configuration implements ConfigurationInterface
             ->useAttributeAsKey('name')
             ->prototype('array')
                 ->children()
+                    ->scalarNode('class')->defaultNull()->end()
                     ->scalarNode('name')->defaultValue('default')->end()
                     ->scalarNode('host')->defaultValue('api.realestate.co.nz')->end()
                     ->scalarNode('version')->defaultValue('1')->end()
