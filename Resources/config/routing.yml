@@ -1,3 +1,0 @@
-realestate_co_nz_api_client_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: RealestateCoNzApiClientBundle:Default:index }

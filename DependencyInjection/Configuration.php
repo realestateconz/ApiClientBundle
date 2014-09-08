@@ -23,10 +23,11 @@ class Configuration implements ConfigurationInterface
             ->prototype('array')
                 ->children()
                     ->scalarNode('name')->defaultValue('default')->end()
+                    ->scalarNode('class')->defaultNull()->end()
                     ->scalarNode('host')->defaultValue('api.realestate.co.nz')->end()
                     ->scalarNode('version')->defaultValue('1')->end()
-                    ->scalarNode('public_key')->end()
-                    ->scalarNode('private_key')->end()
+                    ->scalarNode('public_key')->isRequired()->end()
+                    ->scalarNode('private_key')->isRequired()->end()
                 ->end()
             ->end()->end()
         ;

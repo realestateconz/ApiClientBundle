@@ -8,8 +8,7 @@
         <parameter key="realestateconz_apiclient.client.class">RealestateCoNz_Api_Client</parameter>
         <parameter key="realestateconz_apiclient.client.version">1</parameter>
         <parameter key="realestateconz_apiclient.client.host">api.realestate.co.nz</parameter>
-        
-        
+
         <parameter key="realestateconz_apiclient.registry.class">RealestateCoNz\ApiClientBundle\Registry</parameter>
     </parameters>
 
