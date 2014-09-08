@@ -18,24 +18,22 @@ class RealestateCoNzApiClientExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
+        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('services.xml');
+
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
         
         foreach($config as $name => $clientConfig) {
             $clientDefinition = new Definition();
             $clientDefinition->setClass(isset($clientConfig['class']) ? $clientConfig['class'] : "RealestateCoNz_Api_Client");
-            
             $clientDefinition->addArgument($clientConfig['private_key']);
             $clientDefinition->addArgument($clientConfig['public_key']);
-            $clientDefinition->addArgument(isset($clientConfig['version']) ? $clientConfig['version'] : $container->getParameter("realestateconz_apiclient.client.version"));
-            $clientDefinition->addArgument(isset($clientConfig['host']) ? $clientConfig['host'] : $container->getParameter("realestateconz_apiclient.client.host"));
+            $clientDefinition->addArgument($clientConfig['version']);
+            $clientDefinition->addArgument($clientConfig['host']);
             
             $container->setDefinition("realestateconz_apiclient.client.$name", $clientDefinition);
         }
-        
-
-        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('services.xml');
     }
     
     /**
