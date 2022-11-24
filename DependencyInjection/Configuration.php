@@ -16,7 +16,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder('realestateconz_apiclient');
-        $rootNode = $treeBuilder->root();
+        $rootNode = $treeBuilder->getRootNode();
 
         $rootNode
             ->useAttributeAsKey('name')
