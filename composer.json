@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "symfony/symfony": ">=2.3.0",
+        "symfony/symfony": ">=4.4.0",
         "realestateconz/api-client": "~1.0"
     },
     "autoload": {
